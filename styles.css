@@ -194,40 +194,40 @@ article p strong {
 }
 
 /* Personal Data Section */
-section[aria-labelledby="personal-data-heading"] dl {
+.personal-data dl {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: var(--spacing-xs) var(--spacing-md);
     align-items: baseline;
 }
 
-section[aria-labelledby="personal-data-heading"] dt {
+.personal-data dt {
     font-weight: 600;
     color: var(--text-primary);
 }
 
-section[aria-labelledby="personal-data-heading"] dd {
+.personal-data dd {
     color: var(--text-secondary);
 }
 
-section[aria-labelledby="personal-data-heading"] dd ul {
+.personal-data dd ul {
     list-style: none;
     padding: 0;
 }
 
-section[aria-labelledby="personal-data-heading"] dd li {
+.personal-data dd li {
     margin-bottom: var(--spacing-xs);
 }
 
 /* Education Section */
-section[aria-labelledby="education-heading"] dl {
+.education dl {
     display: grid;
     grid-template-columns: 120px 1fr;
     gap: var(--spacing-md) var(--spacing-lg);
     align-items: baseline;
 }
 
-section[aria-labelledby="education-heading"] dt {
+.education dt {
     font-weight: 600;
     color: var(--primary-color);
     text-align: right;
@@ -235,7 +235,7 @@ section[aria-labelledby="education-heading"] dt {
     border-right: 2px solid var(--accent-color);
 }
 
-section[aria-labelledby="education-heading"] dd {
+.education dd {
     color: var(--text-secondary);
     line-height: 1.6;
 }
@@ -254,18 +254,18 @@ a:hover {
 }
 
 /* Open Source Section Special Styling */
-section[aria-labelledby="opensource-heading"] article h3 {
+.opensource article h3 {
     color: var(--accent-color);
 }
 
-section[aria-labelledby="opensource-heading"] ul li {
+.opensource ul li {
     margin-bottom: var(--spacing-sm);
     padding-left: var(--spacing-md);
     position: relative;
     list-style: none;
 }
 
-section[aria-labelledby="opensource-heading"] ul li::before {
+.opensource ul li::before {
     content: '▸';
     position: absolute;
     left: 0;
@@ -273,7 +273,7 @@ section[aria-labelledby="opensource-heading"] ul li::before {
     font-weight: bold;
 }
 
-section[aria-labelledby="opensource-heading"] strong {
+.opensource strong {
     color: var(--primary-color);
 }
 
@@ -303,13 +303,13 @@ section[aria-labelledby="opensource-heading"] strong {
         padding: var(--spacing-md);
     }
     
-    section[aria-labelledby="personal-data-heading"] dl,
-    section[aria-labelledby="education-heading"] dl {
+    .personal-data dl,
+    .education dl {
         grid-template-columns: 1fr;
         gap: var(--spacing-sm);
     }
     
-    section[aria-labelledby="education-heading"] dt {
+    .education dt {
         text-align: left;
         border-right: none;
         border-bottom: 2px solid var(--accent-color);
