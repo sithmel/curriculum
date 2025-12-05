@@ -3,10 +3,10 @@
 @media print {
     /* Print-specific CSS Variables */
     :root {
-        --print-primary: #2563eb;
-        --print-text: #000000;
-        --print-secondary: #4b5563;
-        --print-border: #d1d5db;
+        --print-primary: #1B4B5A;
+        --print-text: #1B2937;
+        --print-secondary: #4A6B7C;
+        --print-border: #E0F2EF;
         --print-background: #ffffff;
     }
 
@@ -34,8 +34,9 @@
         padding: 0;
     }
 
-    /* Hide headshot for print */
-    body::before {
+    /* Hide headshot and navigation for print */
+    body::before,
+    #cv-navigation {
         display: none !important;
     }
 
@@ -65,7 +66,8 @@
     /* Main Content */
     main {
         max-width: none;
-        margin: 0;
+        margin: 0 !important;
+        margin-left: 0 !important;
         padding: 0;
     }
 

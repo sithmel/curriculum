@@ -8,20 +8,22 @@
 }
 
 :root {
-    /* Color Palette - Modern Professional */
-    --primary-color: #2563eb;      /* Blue */
-    --secondary-color: #7c3aed;    /* Purple */
-    --accent-color: #059669;       /* Green */
-    --text-primary: #1f2937;       /* Dark gray */
-    --text-secondary: #6b7280;     /* Medium gray */
-    --text-light: #9ca3af;         /* Light gray */
-    --background-light: #f8fafc;   /* Very light blue-gray */
-    --border-color: #e5e7eb;       /* Light border */
+    /* Color Palette - Sophisticated Vibrant (from your palette) */
+    --primary-color: #1B4B5A;      /* Deep teal (darkened for professionalism) */
+    --secondary-color: #00D4AA;    /* Turquoise green */
+    --accent-color: #F6C90E;       /* Golden yellow */
+    --text-primary: #1B2937;       /* Very dark blue-gray */
+    --text-secondary: #4A6B7C;     /* Medium teal-gray */
+    --text-light: #7A9CAF;         /* Light blue-gray */
+    --background-light: #F8FDFC;   /* Very light teal tint */
+    --border-color: #E0F2EF;       /* Soft turquoise border */
     --white: #ffffff;
     
     /* Typography */
     --font-primary: 'Inter', 'Segoe UI', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-secondary: 'Helvetica Neue', Arial, sans-serif;
+    --font-headings: 'Playfair Display', 'Georgia', serif;
+    --font-headings: 'Playfair Display', 'Georgia', serif;
     
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -79,6 +81,14 @@ header {
     overflow: hidden;
 }
 
+p {
+  margin-bottom: var(--spacing-xs);
+}
+
+.hide-old .old {
+    display: none;
+}
+
 header::before {
     content: '';
     position: absolute;
@@ -86,29 +96,68 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="60" cy="30" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
-    animation: float 20s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-10px) rotate(180deg); }
 }
 
 header h1 {
+    font-family: var(--font-headings);
     font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-weight: 600;
+    letter-spacing: -0.01em;
     margin-right: 140px; /* Space for headshot */
     position: relative;
     z-index: 2;
 }
 
+/* Navigation */
+#cv-navigation {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: var(--spacing-lg);
+    z-index: 100;
+    max-width: 200px;
+}
+
+#cv-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#cv-navigation li {
+    margin-bottom: var(--spacing-sm);
+}
+
+#cv-navigation li:last-child {
+    margin-bottom: 0;
+}
+
+#cv-navigation a {
+    display: block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+#cv-navigation a:hover {
+    color: var(--primary-color);
+    transform: translateX(4px);
+}
+
+#cv-navigation a:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
 /* Main content */
 main {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-xl);
+    margin-left: 240px; /* Space for fixed navigation */
 }
 
 /* Section Styling */
@@ -119,6 +168,7 @@ section {
 
 /* Section Headers */
 section h2 {
+    font-family: var(--font-headings);
     color: var(--primary-color);
     font-size: 1.75rem;
     font-weight: 600;
@@ -151,6 +201,7 @@ article:hover {
 }
 
 article h3 {
+    font-family: var(--font-headings);
     color: var(--text-primary);
     font-size: 1.25rem;
     font-weight: 600;
@@ -254,10 +305,6 @@ a:hover {
 }
 
 /* Open Source Section Special Styling */
-.opensource article h3 {
-    color: var(--accent-color);
-}
-
 .opensource ul li {
     margin-bottom: var(--spacing-sm);
     padding-left: var(--spacing-md);
@@ -277,7 +324,54 @@ a:hover {
     color: var(--primary-color);
 }
 
+.section-content {
+    column-count: 2;
+}
+
+@media (max-width: 1600px) {
+    .section-content {
+        column-count: 1;
+    }
+}
+
 /* Responsive Design */
+@media (max-width: 1024px) {
+
+    /* Move navigation below header on narrower screens */
+    #cv-navigation {
+        position: static;
+        transform: none;
+        max-width: none;
+        padding: 0 var(--spacing-md) var(--spacing-md) 0;
+        left: auto;
+        top: auto;
+    }
+    
+    #cv-navigation ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-xs);
+        justify-content: center;
+    }
+    
+    #cv-navigation li {
+        margin-bottom: 0;
+    }
+    
+    #cv-navigation a {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        white-space: nowrap;
+    }
+    
+    #cv-navigation a:hover {
+        transform: translateY(-2px);
+    }
+    
+    main {
+        margin-left: 0;
+    }
+}
+
 @media (max-width: 768px) {
     body::before {
         width: 80px;
@@ -299,6 +393,11 @@ a:hover {
         padding: 0 var(--spacing-md);
     }
     
+    #cv-navigation a {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+    
     section {
         padding: var(--spacing-md);
     }
@@ -312,7 +411,6 @@ a:hover {
     .education dt {
         text-align: left;
         border-right: none;
-        border-bottom: 2px solid var(--accent-color);
         padding-right: 0;
         padding-bottom: var(--spacing-xs);
     }
