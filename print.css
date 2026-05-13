@@ -34,9 +34,10 @@
         padding: 0;
     }
 
-    /* Hide headshot and navigation for print */
+    /* Hide headshot, navigation, and version toggle for print */
     body::before,
-    #cv-navigation {
+    #cv-navigation,
+    #version-toggle {
         display: none !important;
     }
 

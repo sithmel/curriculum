@@ -153,6 +153,30 @@ header h1 {
     outline-offset: 2px;
 }
 
+#version-toggle {
+    display: block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    color: var(--text-secondary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+#version-toggle:hover {
+    color: var(--primary-color);
+    transform: translateX(4px);
+}
+
+#version-toggle:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
 /* Main content */
 main {
     margin: 0 auto;

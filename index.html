@@ -17,6 +17,9 @@
 
     <nav id="cv-navigation" aria-label="CV sections navigation">
         <ul>
+            <li><button id="version-toggle" onclick="document.body.classList.toggle('hide-old'); this.textContent = document.body.classList.contains('hide-old') ? 'Extended version' : 'Short version'">Short version</button></li>
+        </ul>
+        <ul>
             <li><a href="#profile-heading">Profile</a></li>
             <li><a href="#personal-data-heading">Personal Data</a></li>
             <li><a href="#experience-heading">Experience</a></li>
