@@ -17,15 +17,15 @@
 
     <nav id="cv-navigation" aria-label="CV sections navigation">
         <ul>
-            <li><button id="version-toggle" onclick="document.body.classList.toggle('hide-old'); this.textContent = document.body.classList.contains('hide-old') ? 'Extended version' : 'Short version'">Short version</button></li>
+            <li><button id="version-toggle" onclick="document.body.classList.toggle('hide-old');">Condensed version</button></li>
         </ul>
         <ul>
             <li><a href="#profile-heading">Profile</a></li>
             <li><a href="#personal-data-heading">Personal Data</a></li>
             <li><a href="#experience-heading">Experience</a></li>
             <li><a href="#opensource-heading">Open Source</a></li>
-            <li><a href="#other-public-work-heading">Public Work</a></li>
-            <li><a href="#education-heading">Education</a></li>
+            <li class="old"><a href="#other-public-work-heading">Public Work</a></li>
+            <li class="old"><a href="#education-heading">Education</a></li>
             <li><a href="#interests-heading">Interests</a></li>
         </ul>
     </nav>
@@ -35,7 +35,7 @@
             <h2 id="profile-heading">Personal Profile</h2>
             <div class="section-content">
                 <p>I am a leader and software engineer with a strong passion for open source, where I’ve contributed as a coach, author, and maintainer. Although I’ve worked with a wide range of technologies, most of my career has centered on the web, a platform I love because of its portability, accessibility and reach. Over the years I’ve developed deep expertise in browsers, web standards, and performance, and I’ve also picked up principles of UX, product thinking, marketing, leadership, and business along the way.</p>
-                <p>Mentoring less experienced developers naturally led me into management, a path I embraced by studying management, communication, process design, and social psychology, and, most importantly, by gaining extensive hands-on experience. I’ve learned how to shape effective engineering organisations, from hiring and onboarding to culture and process. Including rolling out change across medium size organisations. While my focus today is leadership, I remain closely connected to technology, I have developed my AI development workflow and experimenting with Rust and WebAssembly.</p>
+                <p class="old">Mentoring less experienced developers naturally led me into management, a path I embraced by studying management, communication, process design, and social psychology, and, most importantly, by gaining extensive hands-on experience. I’ve learned how to shape effective engineering organisations, from hiring and onboarding to culture and process. Including rolling out change across medium size organisations. While my focus today is leadership, I remain closely connected to technology, I have developed my AI development workflow and experimenting with Rust and WebAssembly.</p>
             </div>
         </section>
 
@@ -149,7 +149,7 @@
                     </ul>
                 </article>
 
-                <article>
+                <article class="old">
                     <h3><a href="https://www.dailymail.co.uk/" target="_blank">Daily Mail (DMGT group)</a></h3>
                     <p><strong>2013/10 – 2015/10 Software Developer</strong></p>
                     <p>Mobile and desktop web site, Front end performance optimizations (as a tech lead), new HTML5 videoplayer, Interactive maps for elections reporting.</p>
@@ -264,7 +264,7 @@
             </div>
         </section>
 
-        <section aria-labelledby="other-public-work-heading">
+        <section class="old" aria-labelledby="other-public-work-heading">
             <h2 id="other-public-work-heading">Other Public Work</h2>
             <div class="section-content">
                 <p>I have experience as public speaker. For example: microservices for the frontend (at the microservices meetup - Skillsmatter London, video no longer available), in multiple editions of "Linux day, Turin": "Python: how to become an hacker" (2009), "HTML5: The new frontiers of the web" (2010), "Hello Node.js" (2012)</a>. And many and many times in internal conferences. for example: <a href="https://sithmel.github.io/do-androids-dream-of-electric-duck/#/" target="_blank">"Do androids dream of electric duck?"</a>, <a href="https://sithmel.github.io/watership-down-presentation/" target="_blank">"Understanding teams with Watership Down"</a>, <a href="https://slides.com/sithmel/deck-9" target="_blank">"Data Structures in JS"</a>, <a href="https://slides.com/sithmel/web-perf" target="_blank">"Everything you always wanted to know about web performance (but were afraid to ask)"</a> </p>
@@ -301,7 +301,7 @@
             <div class="section-content">
                 <p>I have played guitar, bass guitar and flute since I was 11. I performed and currently perform in various different contexts (blues/jazz/folk etc).</p>
                 <p>I volunteer at the local parish church in the choir and as a catechist for both children (confirmation, alpha groups) and adults (RCIA, marriage preparation).</p>
-                <p>In the past, I worked as sound technician (about 40 live concerts between 1996 – 1998). I worked as a volunteer for special needs adult between 1998 - 2000.</p>
+                <p class="old">In the past, I worked as sound technician (about 40 live concerts between 1996 – 1998). I worked as a volunteer for special needs adult between 1998 - 2000.</p>
             </div>
         </section>
     </main>

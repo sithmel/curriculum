@@ -76,7 +76,7 @@ header {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: var(--white);
     padding: var(--spacing-2xl) var(--spacing-xl);
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-sm);
     position: relative;
     overflow: hidden;
 }
@@ -154,7 +154,9 @@ header h1 {
 }
 
 #version-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
     padding: var(--spacing-xs) var(--spacing-sm);
     color: var(--text-secondary);
     background: none;
@@ -164,12 +166,41 @@ header h1 {
     font-weight: 600;
     font-size: 0.9rem;
     text-align: left;
-    transition: all 0.2s ease;
+    position: relative;
+}
+
+#version-toggle::before {
+    content: '';
+    width: 36px;
+    min-width: 36px;
+    height: 20px;
+    background: var(--text-light);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+#version-toggle::after {
+    content: '';
+    position: absolute;
+    left: calc(var(--spacing-sm) + 2px);
+    width: 16px;
+    height: 16px;
+    background: var(--white);
+    border-radius: 50%;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease;
+}
+
+.hide-old #version-toggle::before {
+    background: var(--secondary-color);
+}
+
+.hide-old #version-toggle::after {
+    transform: translateX(16px);
 }
 
 #version-toggle:hover {
     color: var(--primary-color);
-    transform: translateX(4px);
 }
 
 #version-toggle:focus {
